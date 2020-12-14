@@ -17,10 +17,10 @@ commonName					= Common Name (e.g. server FQDN or YOUR name)
 commonName_max					= 64
 
 [ req_ext ]
-basicConstraints 			= CA:FALSE
+basicConstraints 				= CA:FALSE
 keyUsage 					= digitalSignature, keyEncipherment
-extendedKeyUsage 			= clientAuth,serverAuth
-subjectAltName 				= @alt_names
+extendedKeyUsage 				= clientAuth,serverAuth
+subjectAltName 					= @alt_names
 
 [alt_names]
 DNS.1   					= svr1.exmaple.com
