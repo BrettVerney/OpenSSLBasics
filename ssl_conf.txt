@@ -1,0 +1,24 @@
+[ req ]
+default_bits					= 2048
+distinguished_name				= req_dn
+req_extensions					= req_ext
+prompt							= no
+
+[ req_dn ]
+countryName					= AU
+stateOrProvinceName				= Queensland
+localityName					= Brisbane
+organizationName				= WiFi Wizard Of OZ
+organizationalUnitName				= ICT Services
+emailAddress					= brett@wifiwizardofoz.com
+commonName					= server.wifiwizardofoz.com
+
+[ req_ext ]
+basicConstraints 				= CA:FALSE
+keyUsage 					= digitalSignature, keyEncipherment
+extendedKeyUsage 				= clientAuth,serverAuth
+subjectAltName 					= @alt_names
+
+[alt_names]
+DNS.1   					= server1.wifiwizardofoz.com
+DNS.2   					= server2.wifiwizardofoz.com
