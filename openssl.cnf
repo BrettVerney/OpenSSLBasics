@@ -4,14 +4,14 @@ distinguished_name				= req_distinguished_name
 req_extensions					= req_ext
 
 [ req_distinguished_name ]
-countryName						= Country Name (2 letter code)
+countryName					= Country Name (2 letter code)
 countryName_default				= AU
 stateOrProvinceName				= State or Province Name (full name)
-stateOrProvinceName_default		= Queensland
+stateOrProvinceName_default			= Queensland
 localityName					= Locality Name (eg, city)
-localityName_default			= Brisbane
+localityName_default				= Brisbane
 organizationName				= Organization Name
-organizationalUnitName			= Organizational Department
+organizationalUnitName				= Organizational Department
 emailAddress					= Email Address
 commonName						= Common Name (e.g. server FQDN or YOUR name)
 commonName_max					= 64
