@@ -5,13 +5,13 @@ req_extensions           = req_ext
 prompt                   = no
 
 [ req_dn ]
-countryName              = AU
-stateOrProvinceName      = Queensland
-localityName             = Brisbane
-organizationName         = WiFi Wizard Of OZ
-organizationalUnitName   = ICT Services
-emailAddress             = brett@wifiwizardofoz.com
-commonName               = server.wifiwizardofoz.com
+countryName              = US 				
+stateOrProvinceName      = Fakestate					  			
+localityName             = Fakeville								
+organizationName         = ACME							
+organizationalUnitName   = Marketing						
+emailAddress             = admin@acme.org						
+commonName               = servervip.acme.org		
 
 [ req_ext ]
 basicConstraints         = CA:FALSE
@@ -20,5 +20,6 @@ extendedKeyUsage         = clientAuth,serverAuth
 subjectAltName           = @alt_names
 
 [alt_names]
-DNS.1                    = server1.wifiwizardofoz.com
-DNS.2                    = server2.wifiwizardofoz.com
+DNS.1                    = servervip.acme.org
+DNS.2                    = server1.acme.org
+DNS.3                    = server2.acme.org
