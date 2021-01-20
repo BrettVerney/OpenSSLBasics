@@ -17,6 +17,6 @@ Instructions and examples for commonly used OpenSSL functions.
 3.) Using a CLI terminal run the command:</br></br>
 ```openssl req -new -out server.csr -newkey rsa:2048 -nodes -sha256 -keyout private.key -config openssl.cnf```</br></br>
 4.) Verify the contents of the CSR with the following command:</br></br>
-```openssl req -in mycsr.csr -noout -text```</br></br>
+```openssl req -in server.csr -noout -text```</br></br>
 5.) Submit CSR to CA to sign</br>
 6.) Import CA signed certificate, any root and/or imtermediate certificates, and private key to servers</br>
