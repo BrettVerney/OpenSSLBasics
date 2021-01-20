@@ -18,5 +18,6 @@ Instructions and examples for commonly used OpenSSL functions.
 ```openssl req -new -out server.csr -newkey rsa:2048 -nodes -sha256 -keyout private.key -config openssl.cnf```</br></br>
 4.) Verify the contents of the CSR with the following command:</br></br>
 ```openssl req -in server.csr -noout -text```</br></br>
-5.) Submit CSR to CA to sign</br>
-6.) Import CA signed certificate, any root and/or imtermediate certificates, and private key to servers</br>
+5.) Save private key in a password safe application</br>
+6.) Submit CSR to CA to sign</br>
+7.) Import CA signed certificate, any root and/or imtermediate certificates, and private key to servers</br>
