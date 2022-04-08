@@ -13,7 +13,7 @@ Instructions and examples for commonly used OpenSSL functions.
 ## Instructions
 
 1.) Open the file **openssl.cnf** with a text editor</br>
-2.) Replace the example values with real information and save</br>
+2.) Replace the example values with real information and save (see req_ext_examples.txt for examples of each certificate type) </br>
 3.) Using a CLI terminal run the command:</br></br>
 ```openssl req -new -out server.csr -newkey rsa:2048 -nodes -sha256 -keyout private.key -config openssl.cnf```</br></br>
 4.) Verify the contents of the CSR with the following command:</br></br>
