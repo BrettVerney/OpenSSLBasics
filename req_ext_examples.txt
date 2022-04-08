@@ -1,4 +1,4 @@
-# Examples of 
+# Key usage examples for different certificate types
 
 # TLS WEB SERVER AUTHENTICATION
 [ req_ext ]
