@@ -1,0 +1,22 @@
+# Examples of 
+
+# TLS WEB SERVER AUTHENTICATION
+[ req_ext ]
+basicConstraints         = CA:FALSE
+keyUsage                 = critical, nonRepudiation, digitalSignature, keyEncipherment
+extendedKeyUsage         = critical, serverAuth
+subjectAltName           = @alt_names
+
+# TLS WEB CLIENT AUTHENTICATION
+[ req_ext ]
+basicConstraints         = CA:FALSE
+keyUsage                 = critical, nonRepudiation, digitalSignature, keyEncipherment
+extendedKeyUsage         = critical, clientAuth
+subjectAltName           = @alt_names
+
+# CODE SIGNING
+[ req_ext ]
+basicConstraints         = CA:FALSE
+keyUsage                 = critical, nonRepudiation, digitalSignature
+extendedKeyUsage         = critical, codeSigning
+subjectAltName           = @alt_names
