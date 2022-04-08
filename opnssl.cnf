@@ -16,7 +16,7 @@ commonName               = servervip.acme.org
 [ req_ext ]
 basicConstraints         = CA:FALSE
 keyUsage                 = digitalSignature, keyEncipherment
-extendedKeyUsage         = clientAuth,serverAuth
+extendedKeyUsage         = clientAuth,serverAuth,digitalSignature
 subjectAltName           = @alt_names
 
 [alt_names]
