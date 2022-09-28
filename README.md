@@ -2,7 +2,7 @@
 Instructions and examples for commonly used OpenSSL functions.
 
 **Author:** Brett Verney</br>
-**Version:** v0.1 | 20-01-2021
+**Version:** v0.2 | 28-09-2022
 
 ## Requirements
 
@@ -21,3 +21,5 @@ Instructions and examples for commonly used OpenSSL functions.
 5.) Save private key in a password safe application</br>
 6.) Submit CSR to CA to sign</br>
 7.) Import CA signed certificate, any root and/or imtermediate certificates, and private key to servers</br>
+8.) Optionally combine the signed certificate with the private key to PKCS12 format with the following command:</br></br>
+```openssl pkcs12 -export -out server.p12 -in server.cer -inkey private.key -passin pass:secure_password -passout pass:secure_password```</br></br>
