@@ -1,22 +1,29 @@
 # Key usage examples for different certificate types
 
-# TLS WEB SERVER AUTHENTICATION
-[ req_ext ]
-basicConstraints         = CA:FALSE
-keyUsage                 = critical, nonRepudiation, digitalSignature, keyEncipherment
-extendedKeyUsage         = critical, serverAuth
-subjectAltName           = @alt_names
+## Most Servers ###
 
-# TLS WEB CLIENT AUTHENTICATION
 [ req_ext ]
-basicConstraints         = CA:FALSE
-keyUsage                 = critical, nonRepudiation, digitalSignature, keyEncipherment
-extendedKeyUsage         = critical, clientAuth
-subjectAltName           = @alt_names
+basicConstraints = CA:FALSE
+keyUsage = critical, digitalSignature, keyEncipherment
+extendedKeyUsage = critical, serverAuth, clientAuth
+@alt_names
 
-# CODE SIGNING
+# Optional Usages
+# Can can be considered based on specific requirements:
+basicConstraints = CA:TRUE, pathlen:0 # Use this if the server needs to sign other certificates, making it a CA. This is rare for most server scenarios.
+keyUsage = critical, cRLSign, keyCertSign # cRLSign and keyCertSign for servers acting as CAs.
+extendedKeyUsage = emailProtection # If the server is used for secure email communication.
+extendedKeyUsage =timeStamping # If the server provides time-stamping services.
+
+## Most Clients ###
+
 [ req_ext ]
-basicConstraints         = CA:FALSE
-keyUsage                 = critical, nonRepudiation, digitalSignature
-extendedKeyUsage         = critical, codeSigning
-subjectAltName           = @alt_names
+basicConstraints = CA:FALSE
+keyUsage = critical, digitalSignature
+extendedKeyUsage = critical, clientAuth
+@alt_names
+
+# Optional Usages
+keyUsage = nonRepudiation # If the client engages in activities where it must not deny having sent a message.
+extendedKeyUsage = emailProtection # For clients that use certificates for secure email.
+#extendedKeyUsage = serverAuth # In rare cases where a client might also act as a server.
